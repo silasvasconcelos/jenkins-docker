@@ -20,4 +20,6 @@ RUN apt-get install -y docker-ce
 
 RUN usermod -a -G docker jenkins
 
+RUN echo 'jenkins ALL=NOPASSWD: ALL' >> /etc/sudoers
+
 USER jenkins
